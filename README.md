@@ -1,7 +1,7 @@
 # BigMacIndex
 
 # Overview
-This repository contains Python code for analyzing the relationship between Big Mac prices and hourly wages using linear regression. The code is implemented in Google Colab and utilizes various libraries such as pandas, matplotlib, seaborn, and statsmodels.
+This repository contains Python code for analyzing the relationship between Big Mac prices(Independent Variable) and hourly wages(Dependent Variable) using linear regression. The code is implemented in Google Colab and utilizes various libraries such as pandas, matplotlib, seaborn, and statsmodels.
 Where I have answer to a following question
 
 1. Is there a relationship between the price od a Big Mac and the net hourly wages of workers around the world? Of so , How strong is the Relationship ?
@@ -38,8 +38,9 @@ plt.show()
 5. Linear Regression:
 Fit a linear regression model using the Ordinary Least Squares (OLS) method from the statsmodels library.
 python
+note: OLS is a method used to estimate the parameters in a linear regression model. It minimizes the sum of squared differences between the observed and predicted values, providing the "best-fitting" line.
 import statsmodels.api as sm
-
+Note : statsmodels.api is used to perform linear regression analysis with the Ordinary Least Squares (OLS) method. The statsmodels library is a Python package that provides classes and functions for estimating and testing statistical models.
 model = sm.OLS.from_formula('Hourly_Wages ~ Big_Mac_Price', data=df)
 result = model.fit()
 print(result.summary())
@@ -54,6 +55,9 @@ plt.show()
 
 6. ANOVA and R-squared Calculation:
 Calculate ANOVA F-statistics and R-squared.
+Note: ANOVA (Analysis of Variance) F-statistics and R-squared are calculated in the context of linear regression to assess the overall significance of the regression model and to quantify the proportion of variance in the dependent variable explained by the independent variables.
+sum of squares due to regression (SSR) by the degrees of freedom associated with regression (df_sse).
+
 ssr = np.sum(np.square(net_hourly_wages_pred - net_hourly_wages_pred.mean()))
 sse = np.sum(np.square(net_hourly_wages_pred - df['Hourly_Wages'].values))
 
@@ -62,6 +66,7 @@ df_sse = 27 - 1 - df_ssr
 
 F_stats = (ssr/df_ssr)/(sse/df_sse)
 r_square = 1 - (sse / (sse + ssr))
+Note : F_stats 
 
 print('F Statistics =', F_stats)
 print('R Square Value =', r_square)
