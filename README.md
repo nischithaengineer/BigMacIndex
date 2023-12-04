@@ -20,12 +20,14 @@ Where I have answer to a following question
   os.chdir('/content/drive/MyDrive/Data Science ')
 
 2. Load Data:
+Big Mac Index data has Big Mac prices and Net hourly wages of 27 countries
+Note : net hourly wages are based on a weighted average of 12 professional 
 Load the Big Mac Index data from an Excel file into a Pandas DataFrame.
 python
 import pandas as pd
 df = pd.read_excel("/content/drive/MyDrive/Data Science /Big Mac Index
 
-3. Data Visualization:
+4. Data Visualization:
 Visualize the relationship between 'Big_Mac_Price' and 'Hourly_Wages' using a scatter plot.
 python
 import matplotlib.pyplot as plt
@@ -33,7 +35,7 @@ import seaborn as sns
 sns.relplot(x='Big_Mac_Price', y='Hourly_Wages', data=df)
 plt.show()
 
-4. Linear Regression:
+5. Linear Regression:
 Fit a linear regression model using the Ordinary Least Squares (OLS) method from the statsmodels library.
 python
 import statsmodels.api as sm
