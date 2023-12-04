@@ -2,6 +2,13 @@
 
 # Overview
 This repository contains Python code for analyzing the relationship between Big Mac prices and hourly wages using linear regression. The code is implemented in Google Colab and utilizes various libraries such as pandas, matplotlib, seaborn, and statsmodels.
+Where I have answer to a following question
+
+1. Is there a relationship between the price od a Big Mac and the net hourly wages of workers around the world? Of so , How strong is the Relationship ?
+
+2. Is it possible to develop a model to predict or determine the net hourly wage of a worker around the world by the price of a Big Mac hamburger in that country? If so , how good is the model?
+
+3. if a model can be constructed to determine the net hourly wage of a worker around the world by the price of a Big Mac hamburger, what would be the predicted net hourly wage of a worker in a country if the price of a Big Mac Hamburger was $3.00?
 
 # Instructions
 1. Mount Google Drive:
